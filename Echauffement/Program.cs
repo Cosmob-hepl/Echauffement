@@ -1,4 +1,6 @@
-﻿namespace Echauffement;
+﻿using System.Diagnostics;
+
+namespace Echauffement;
 
 class Program
 {
@@ -11,9 +13,18 @@ class Program
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
         Console.WriteLine("Bonjour, je m'appelle Langue Corentin et mon jeu préféré est Kenshi");
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
-
+        Console.WriteLine("Comment t'appelles tu?");
+        string Fistname = Console.ReadLine();
+        Console.WriteLine("Quel age as tu?");
+        int Age = Convert.ToInt32(Console.ReadLine());
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
-
+        if (Age >= 18)
+        {
+            Console.WriteLine("Tu es majeur");
+        } else
+        {
+            Console.WriteLine("Tu es mineur");
+        }    
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
